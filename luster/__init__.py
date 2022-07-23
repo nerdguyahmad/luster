@@ -25,6 +25,7 @@ from luster.exceptions import *
 from luster.file import *
 from luster.http import *
 from luster.object import *
+from luster.permissions import *
 from luster.protocols import *
 from luster.server import *
 from luster.state import *

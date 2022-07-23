@@ -245,6 +245,9 @@ class WebsocketHandler(StateManagementMixin):
         This is a blocking coroutine that does not return
         until websocket connection is closed.
         """
+        if not self.__closed:
+            raise RuntimeError("Websocket is already connected")
+
         _LOGGER.info("Establishing a connection with Revolt websocket.")
 
         url = await self.get_websocket_url()

@@ -80,5 +80,3 @@ class BaseFlags:
             if isinstance(member, int) and not name.startswith("_"):
                 cls.__valid_flags__[name] = member
                 setattr(cls, name, _FlagProxy(name, member))
-
-# TODO: Permissions
